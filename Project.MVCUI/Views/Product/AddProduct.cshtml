@@ -1,0 +1,23 @@
+﻿@model ProductVM
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+<div class="container">
+    @using (Html.BeginForm("AddProduct", "Product", FormMethod.Post))
+    {<div>
+            @Html.TextBoxFor(x => x.Product.Name, new { placeholder = " Product Name" });
+        </div>
+            <div>
+            @Html.TextBoxFor(x => x.Product.UnitPrice, new { placeholder = "Product Price" });
+             </div>
+                <div>
+            @Html.TextBoxFor(x => x.Product.UnitsInStock, new { placeholder = "Product Stock" });
+                 </div>
+                 <div>
+                    <button> Add Product </button>
+                 </div>
+            }
+
+ </div>
+
